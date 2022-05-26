@@ -1,0 +1,60 @@
+#alert_admin {
+  z-index: 99999 !important;
+  right: 10px;
+  top: 10px;
+  opacity: 0;
+  visibility: hidden;
+}
+#alert_admin.show {
+  visibility: visible;
+  opacity: 1;
+  transition: all 1s;
+}
+
+#count_quality, .count_qualityCart {
+  position: relative;
+}
+#count_quality button, .count_qualityCart button {
+  position: absolute;
+  height: 37px;
+  width: 37px;
+  text-align: center;
+  background: #fff0;
+  border: 0px;
+}
+#count_quality button:first-child, .count_qualityCart button:first-child {
+  left: 0px;
+}
+#count_quality button:last-child, .count_qualityCart button:last-child {
+  right: 0px;
+}
+
+#listBtnUser span {
+  cursor: pointer;
+}
+#listBtnUser span:hover {
+  background: #0a53be;
+  color: white;
+}
+
+#listBtnOrder span {
+  cursor: pointer;
+}
+#listBtnOrder span:hover {
+  background: #0a53be;
+  color: white;
+}
+
+.avatar_pofile {
+  position: relative;
+}
+.avatar_pofile:hover label {
+  display: block;
+}
+.avatar_pofile label {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 40%;
+  left: 40%;
+}

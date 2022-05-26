@@ -1,0 +1,63 @@
+@import 'MyVariables';
+
+#alert_admin {
+    z-index: 99999 !important;
+    right: 10px;
+    top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    &.show {
+        visibility: visible;
+        opacity: 1;
+        transition: all 1s;
+    }
+}
+
+#count_quality, .count_qualityCart{
+    position: relative;
+    button{
+        position: absolute;
+        height: 37px;
+        width: 37px;
+        text-align: center;
+        background: #fff0;
+        border: 0px;
+        &:first-child{
+            left: 0px;
+        }
+        &:last-child{
+            right: 0px;
+        }
+    }
+}
+#listBtnUser span{
+    cursor: pointer;
+    &:hover {
+        background: #0a53be;
+        color: white;
+    }
+}
+
+#listBtnOrder span{
+    cursor: pointer;
+    &:hover {
+        background: #0a53be;
+        color: white;
+    }
+}
+
+.avatar_pofile{
+    position: relative;
+    &:hover {
+        & label{
+            display: block;
+        }
+    }
+    label{
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: 40%;
+        left: 40%;
+    }
+}
