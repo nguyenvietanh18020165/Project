@@ -54,24 +54,6 @@ $($(".list_images_icon")).ready(() => {
         console.log($("#images_list"));
     })
 })
-$("#addQlt").ready(() => {
-    $("#addQlt").click(() => {
-        $("#valCountQuality").val(Number($("#valCountQuality").val()) + 1);
-    })
-    $("#removeQlt").click(() => {
-        if (Number($("#valCountQuality").val()) <= 0) {
-            $("#valCountQuality").val(0);
-        } else {
-            $("#valCountQuality").val(Number($("#valCountQuality").val()) - 1);
-        }
-    })
-
-    $("#valCountQuality").change(() => {
-        if ($("#valCountQuality").val() < 0) {
-            $("#valCountQuality").val(0);
-        }
-    })
-})
 
 $("#btn_addPrdDt").ready(() => {
     $("#btn_addPrdDt").click((data) => {
@@ -298,23 +280,6 @@ $("#addQlt").ready(() => {
         if ($("#valCountQuality").val() < 0) {
             $("#valCountQuality").val(0);
         }
-    })
-})
-
-$("#btn_addPrdDt").ready(() => {
-    $("#btn_addPrdDt").click((data) => {
-        $id = data.currentTarget.attributes['data-prdid'].value;
-        $quality = $("#valCountQuality").val();
-        if ($("#name_user").text() != "") {
-            $.get("/product/cart/add", {"id": $id, 'quality': $quality}, (data) => {
-                if (data) {
-                    $("#count_cart").text(data);
-                }
-            })
-        } else {
-            window.location = "/login";
-        }
-
     })
 })
 

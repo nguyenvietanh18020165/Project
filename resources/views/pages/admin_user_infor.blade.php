@@ -7,8 +7,6 @@
         <th scope="col">Ngày sinh</th>
         <th scope="col">Giới tính</th>
         <th scope="col">Địa chỉ</th>
-        <th scope="col">Webisite</th>
-        <th scope="col">Hành động</th>
     </tr>
     </thead>
     <tbody>

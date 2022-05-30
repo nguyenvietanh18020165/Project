@@ -1,14 +1,13 @@
 <section class="container my-3">
     <div class="showCart p-3 rounded-3 border bg-white pb-0">
-        <h1>Your Cart</h1>
+        <h1>Giỏ hàng của bạn</h1>
         <div class="table-responsive">
             <table class="table table-borderless text-center">
                 <thead>
                 <tr>
-                    <th scope="col" style="width: 300px">Product</th>
-                    <th scope="col">Quatity</th>
-                    <th scope="col">Size</th>
-                    <th scope="col">Price</th>
+                    <th scope="col" style="width: 300px">Sản phẩm</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col">Giá</th>
                     <th scope="col"></th>
                 </tr>
                 </thead>
@@ -35,17 +34,17 @@
                                 <input type="text" style="max-width: 90px !important;"
                                        data-idcart="{{$val->carts_id}}"
                                        class="form-control px-4 text-center valCountQualityCart" placeholder=""
-                                       aria-label="Example text with button addon"
+                                       
                                        value="{{$val->quality}}"
                                        aria-describedby="button-addon1">
                                 <button type="button" class="removeQltCart">-</button>
                                 <button type="button" class="addQltCart">+</button>
                             </div>
                         </td>
-                        <td></td>
-                        <td class="h-100"><span class="w-100 text-center d-inline-block">${{$val->price}}</span></td>
+                        
+                        <td class="h-100"><span class="w-100 text-center d-inline-block">{{$val->price}} VNĐ</span></td>
                         <td>
-                            <button class="btn btn-danger btn_delCart" data-idcart="{{$val->carts_id}}">Delete
+                            <button class="btn btn-danger btn_delCart" data-idcart="{{$val->carts_id}}">Xóa
                             </button>
                         </td>
                     </tr>
@@ -57,8 +56,8 @@
 
     </div>
     <div class="w-100 bg-danger rounded-bottom text-right p-4 text-white">
-        <span class="me-2 fw-bold">Total</span>
-        <span class=" fw-bold" id="sumMoneyCart">$
+        <span class="me-2 fw-bold">Tổng tiền: </span>
+        <span class=" fw-bold" id="sumMoneyCart">
                     <?php
             $sum = 0;
             foreach ($product as $val) {
@@ -66,7 +65,7 @@
             }
             echo $sum;
             ?>
-                </span>
+               VNĐ </span>
     </div>
 </section>
 

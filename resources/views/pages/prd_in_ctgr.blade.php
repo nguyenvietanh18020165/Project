@@ -19,7 +19,7 @@
                     <div class="btn_icon position-absolute text-end">
                     <span class="cart d-block btn_addcart" data-prdid="{{$val->id}}">
                         <i class="fa-solid fa-basket-shopping"></i>
-                        <span>ADD TO CART</span>
+                        <span>THÊM VÀO GIỎ HÀNG</span>
                     </span>
                         <span class="like mt-2">
                         <i class="fa-solid fa-heart"></i>

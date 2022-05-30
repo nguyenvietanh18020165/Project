@@ -88,7 +88,7 @@ class BlogController extends Controller
     }
 
     public function showBlogAdmin(){
-        $blog = $this->BlogService->allBlog();
+        $blog = $this->BlogService->allBlogAdmin();
 //        $category = $this->productService->getCategory();
         return view("pages.admin_all_blog", ["blog" => $blog]);
     }

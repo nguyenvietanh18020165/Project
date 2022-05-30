@@ -29,7 +29,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 col-sm-6 col-md-8"><a href="/product/{{$val->slug}}" class="d-inline-block text-truncate text-decoration-none w-100 text-dark">{{$val->name}}</a></div>
-                    <div class="col-12 col-sm-6 col-md-4 text-end">${{$val->price}}</div>
+                    <div class="col-12 col-sm-6 col-md-4 text-end">{{$val->price}} VNĐ</div>
                 </div>
             </div>
         @endforeach

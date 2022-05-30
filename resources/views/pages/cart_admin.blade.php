@@ -2,11 +2,10 @@
 <table class="table">
     <thead>
     <tr class="text-center">
-        <th scope="col">Name</th>
+        <th scope="col">Tên</th>
         <th scope="col">Email</th>
-        <th scope="col">gross product</th>
-        <th scope="col">total money</th>
-        <th scope="col">Action</th>
+        <th scope="col">Tổng sản phẩm</th>
+        <th scope="col">Tổng tiền</th>
     </tr>
     </thead>
     <tbody>
@@ -26,7 +25,7 @@
             <td>{{$sumMoney}}</td>
             <td>
                 <button id="" class="btn btn-danger btn_cartDetail" data-toggle="modal" data-target="#modalCart"
-                        data-cartId="{{$val->id}}">Detail
+                        data-cartId="{{$val->id}}">Chi tiết
                 </button>
             </td>
         </tr>

@@ -1,5 +1,5 @@
 <section class="container">
-    <h3 class="text-center mt-3">RELATED PRODUCTS</h3>
+    <h3 class="text-center mt-3">SẢN PHẨM LIÊN QUAN</h3>
     <div id="owl-latest_product" class="latest_product">
         @foreach($productRelated as $val)
             <div class="item me-3">
@@ -19,7 +19,7 @@
                     <div class="btn_icon position-absolute text-end">
                     <span class="cart d-block btn_addcart" data-prdid="{{$val->id}}">
                         <i class="fa-solid fa-basket-shopping"></i>
-                        <span>ADD TO CART</span>
+                        <span>THÊM VÀO GIỎ HÀNG</span>
                     </span>
                         <span class="like mt-2">
                         <i class="fa-solid fa-heart"></i>
@@ -28,7 +28,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 col-sm-6 col-md-8"><a href="/product/{{$val->slug}}" class="d-inline-block text-truncate text-decoration-none w-100 text-dark">{{$val->name}}</a></div>
-                    <div class="col-12 col-sm-6 col-md-4 text-end">${{$val->price}}</div>
+                    <div class="col-12 col-sm-6 col-md-4 text-end">{{$val->price}} VNĐ</div>
                 </div>
             </div>
         @endforeach

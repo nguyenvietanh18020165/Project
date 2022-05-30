@@ -75,8 +75,7 @@ class ProductController extends Controller
         }
         $images = $this->productService->getImages($product->id);
         $data = [
-            "title" => "RVM SeaMaf | Online & physical bead shop with the best beads and beading supplies in Zimbabwe ✓
-            Over 9000 beads for jewelry making ✓ Glass beads ✓ Beading supplies and much more!",
+            "title" => "Fruit & Health",
             "pages" => [
                 'pages.product_detail',
                 'pages.related_product'
@@ -145,8 +144,7 @@ class ProductController extends Controller
             $countCart = 0;
         }
         $data = [
-            "title" => "RVM SeaMaf | Online & physical bead shop with the best beads and beading supplies in Zimbabwe ✓
-            Over 9000 beads for jewelry making ✓ Glass beads ✓ Beading supplies and much more!",
+            "title" => "Fruit & Health",
             "pages" => [
                 'pages.cart_detail',
                 'pages.latest_product'
@@ -196,8 +194,7 @@ class ProductController extends Controller
             $countCart = 0;
         }
         $data = [
-            "title" => "RVM SeaMaf | Online & physical bead shop with the best beads and beading supplies in Zimbabwe ✓
-            Over 9000 beads for jewelry making ✓ Glass beads ✓ Beading supplies and much more!",
+            "title" => "Fruit & Health",
             "pages" => [
                 "pages.search_product"
             ],

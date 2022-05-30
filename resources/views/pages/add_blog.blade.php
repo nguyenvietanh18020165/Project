@@ -40,7 +40,7 @@
             <textarea class="form-control" rows="3" id="" name="BlogDesc"></textarea>
         </div>
         <div class="w-100 text-right mb-3">
-            <button class="btn btn-primary" type="submit">Upload</button>
+            <button class="btn btn-primary" type="submit">Tải lên</button>
         </div>
         @csrf
     </form>

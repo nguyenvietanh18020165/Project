@@ -1,5 +1,5 @@
 <section class="container">
-    <h3 class="text-center mt-3">BROWSE TOP SELLING PRODUCTS</h3>
+    <h3 class="text-center mt-3">SẢN PHẨM NỔI BẬT</h3>
     <div class="row latest_product product_hot_home">
         @foreach($product as $val)
             <div class="col-6 col-sm-4 col-md-3 col-lg-3 mt-2">
@@ -30,7 +30,7 @@
                     <div class="col-12 col-sm-6 col-md-8"><a href="/product/{{$val->slug}}"
                                                              class="d-inline-block text-truncate text-decoration-none w-100 text-dark">{{$val->name}}</a>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 text-end">${{$val->price}}</div>
+                    <div class="col-12 col-sm-6 col-md-4 text-end">{{$val->price}} VNĐ</div>
                 </div>
             </div>
         @endforeach

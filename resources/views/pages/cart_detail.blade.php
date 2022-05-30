@@ -8,7 +8,7 @@
             <div class="modal-body">
                 <div class="list-group">
                     <button type="button" class="list-group-item list-group-item-action active list_payment_modal" data-bs-dismiss="modal">Thanh toán khi nhận hàng</button>
-                    <button type="button" class="list-group-item list-group-item-action list_payment_modal" data-bs-dismiss="modal">Thanh toán momo</button>
+                    <button type="button" class="list-group-item list-group-item-action list_payment_modal" data-bs-dismiss="modal">Thanh toán bằng momo</button>
                 </div>
             </div>
         </div>
@@ -18,16 +18,14 @@
     <div class="row">
         <div class="col-12 col-sm-6 col-md-8">
             <div class="showCart p-3 rounded-3 border bg-gray pb-0">
-                <h1>Your Cart</h1>
+                <h1>Giỏ hàng của bạn</h1>
                 <div class="table-responsive">
                     <table class="table table-borderless">
                         <thead>
                         <tr>
-                            <th scope="col" style="width: 300px">Product</th>
-                            <th scope="col">Quatity</th>
-                            <th scope="col">Size</th>
-                            <th scope="col">Price</th>
-                            <th scope="col"></th>
+                            <th scope="col" style="width: 300px">Sản phẩm</th>
+                            <th scope="col">Số lượng</th>
+                            <th scope="col">Giá</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -64,8 +62,7 @@
 
                                     </div>
                                 </td>
-                                <td></td>
-                                <td class="h-100 d-flex align-items-center">${{$val->price}}</td>
+                                <td class="h-100 d-flex align-items-center">{{$val->price}} VNĐ</td>
                                 @if(!isset($user_payment->status))
                                     <td><button class="btn btn-danger btn_delCart" data-idcart="{{$val->carts_id}}">Delete</button></td>
                                 @endif
@@ -79,8 +76,8 @@
 
             </div>
             <div class="w-100 bg-danger rounded-bottom text-end p-4 text-white">
-                <span class="me-2 fw-bold">Total</span>
-                <span class=" fw-bold" id="sumMoneyCart">$
+                <span class="me-2 fw-bold">Tổng tiền: </span>
+                <span class=" fw-bold" id="sumMoneyCart">
                     <?php
                     $sum = 0;
                         foreach ($product as $val){
@@ -88,7 +85,7 @@
                         }
                         echo $sum;
                     ?>
-                </span>
+                 VNĐ</span>
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4 p-0">
@@ -133,7 +130,7 @@
                            <div class="col-12 col-sm-8" id="sumMoneyPay">Chờ xác nhận</div>
                        @endif
                        @if($user_payment->status == 2)
-                           <div class="col-12 col-sm-8" id="sumMoneyPay">Đăng giao hàng</div>
+                           <div class="col-12 col-sm-8" id="sumMoneyPay">Đang giao hàng</div>
                        @endif
                        @if($user_payment->status == 3)
                            <div class="col-12 col-sm-8" id="sumMoneyPay">Chờ xác nhận hủy đơn</div>

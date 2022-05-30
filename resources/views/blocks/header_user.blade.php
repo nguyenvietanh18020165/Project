@@ -12,7 +12,7 @@
                                    class="form-control w-100 rounded-pill bg-light border-light"
                                    type="search"
                                    name="key"
-                                   placeholder="Search on RVM SeaMaf ...."
+                                   placeholder="Search on Fruit & Health ...."
                                    aria-label="Search" id="search_header"
                                    autocomplete = "off">
                         </form>

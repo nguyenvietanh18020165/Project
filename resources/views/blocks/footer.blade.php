@@ -63,10 +63,10 @@
                 <script>
                     $.get("/tin-tuc/api-allblog", function(data){
                         $result = JSON.parse(data).data;
-                        $("#descBlog1").text($result[0].desc);
+                        $("#descBlog1").text($result[0].name);
                         $("#imagesBlog1").attr("src", "http://127.0.0.1:8000/" + $result[0].image);
                         $("#linkToBlog1").attr("href", "http://127.0.0.1:8000/tin-tuc/" + $result[0].slug);
-                        $("#descBlog2").text($result[1].desc);
+                        $("#descBlog2").text($result[1].name);
                         $("#imagesBlog2").attr("src", "http://127.0.0.1:8000/" + $result[1].image);
                         $("#linkToBlog2").attr("href", "http://127.0.0.1:8000/tin-tuc/" + $result[1].slug);
                     });

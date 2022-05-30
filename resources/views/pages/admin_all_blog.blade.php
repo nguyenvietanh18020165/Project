@@ -5,7 +5,6 @@
         <th scope="col">danh mục sản phẩm</th>
         <th scope="col">danh mục bài viết</th>
         <th scope="col">Admin</th>
-        <th scope="col">Hành động</th>
     </tr>
     </thead>
     <tbody>

@@ -74,6 +74,16 @@ class BlogService
         return true;
     }
 
+    public function allBlogAdmin(){
+        $result = Blog::all();
+        for ($i = 0; $i < count($result); $i++){
+            $result[$i]->blog_category = $this->nameCtgrBlog($result[$i]->blog_category);
+            $result[$i]->category = $this->nameCtgr($result[$i]->category);
+            $result[$i]->user_name = $this->nameUser($result[$i]->user_id);
+        }
+        return $result;
+    }
+
     public function allBlog(){
         $result = Blog::orderBy('id', 'desc')->paginate(5);
         for ($i = 0; $i < count($result); $i++){

@@ -1,12 +1,12 @@
 <table class="table">
     <thead>
     <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Action</th>
+        <th scope="col"></th>
+        <th scope="col">Tên</th>
+        <th scope="col"></th>
         <th scope="col">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCtgrBlog">
-                Add Category
+                Thêm danh mục
             </button>
         </th>
     </tr>
@@ -17,7 +17,7 @@
             <th scope="row">{{$key}}</th>
             <td>{{$val->name}}</td>
             <td>
-                <button class="btn btn-danger btn_delCtgrBlog" data-ctgr="{{$val->id}}" data-name="{{$val->name}}">Delete</button>
+                <button class="btn btn-danger btn_delCtgrBlog" data-ctgr="{{$val->id}}" data-name="{{$val->name}}">Xóa</button>
             </td>
         </tr>
     @endforeach

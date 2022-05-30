@@ -3,22 +3,22 @@
         <input type="text" value="{{$product->id}}" name="productId" hidden>
         <div class="row">
             <div class="form-group col-12 col-sm-6 col-md-6">
-                <label for="productName">Product's name</label>
+                <label for="productName">Tên sản phẩm</label>
                 <input type="text" class="form-control" id="productName"
-                       placeholder="VD: Áo chống nắng" name="productName" value="{{$product->name}}">
+                       placeholder="VD: Cherry Mỹ" name="productName" value="{{$product->name}}">
             </div>
             <div class="form-group col-12 col-sm-3 col-md-3">
-                <label for="productPrice">Price</label>
+                <label for="productPrice">Giá</label>
                 <input type="text" class="form-control" id="productPrice"
-                       placeholder="VD: 60$" name="productPrice" value="{{$product->price}}">
+                       placeholder="VD: 200000 VNĐ" name="productPrice" value="{{$product->price}}">
             </div>
             <div class="form-group col-12 col-sm-3 col-md-3">
-                <label for="productCount">Amount</label>
+                <label for="productCount">Số lượng</label>
                 <input type="text" class="form-control" id="productCount"
-                       placeholder="VD: 60" name="productCount" value="{{$product->count}}">
+                       placeholder="VD: 20" name="productCount" value="{{$product->count}}">
             </div>
             <div class="form-group col-12 col-sm-6 col-md-6">
-                <label for="productImages">image product</label>
+                <label for="productImages">Ảnh sản phẩm</label>
                 <input type="file" class="form-control-file" accept="image/*" multiple name="productImages[]"
                        id="productImages">
             </div>
@@ -32,7 +32,7 @@
             @endforeach
         </div>
         <div class="form-group">
-            <label for="listCtgr">Category</label>
+            <label for="listCtgr">Danh mục</label>
             <select class="form-control" id="listCtgr" name="listCtgr">
                 @foreach($category as $val)
                     @if($val->id == $product->category_id)
@@ -44,12 +44,12 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="productDesc">Example textarea</label>
+            <label for="productDesc">Mô tả sản phẩm</label>
             <textarea class="form-control" name="productDesc" id="productDesc"
                       rows="3">{{$product->description}}</textarea>
         </div>
         <div class="w-100 text-right mb-3">
-            <button class="btn btn-primary" type="submit">Update</button>
+            <button class="btn btn-primary" type="submit">Cập nhật</button>
         </div>
         @csrf
     </form>

@@ -68,7 +68,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <h5 class="text-danger">Lưu ý: Các hành động sẽ được lưu lại ngay lập tức.</h5>
+                
                 <div id="modalCartBody">
 
                 </div>
