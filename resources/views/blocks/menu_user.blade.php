@@ -72,9 +72,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/tin-tuc">Tin tức</a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link" href="#">Liên hệ</a>
-            </li>
+            </li> --}}
             @guest()
                 @if(Route::has('login'))
                     <li class="nav-item">

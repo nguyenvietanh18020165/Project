@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('user_infos', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->string('phone')->nullable();
             $table->string('address')->nullable();
             $table->string('birthday')->nullable();
@@ -23,6 +23,10 @@ return new class extends Migration
             $table->string('avatar')->nullable();
             $table->string('webisite')->nullable();
             $table->timestamps();
+            $table->foreign('user_id')
+            ->references('id')->on('users')
+            ->onDelete('CASCADE')
+            ->onUpdate('CASCADE');
         });
     }
 

@@ -18,13 +18,17 @@ return new class extends Migration
             $table->string("code", 45);
             $table->string("name", 200);
             $table->string("description", 1000)->nullable();
-            $table->integer("category_id");
+            $table->unsignedBigInteger("category_id");
             $table->integer("price");
             $table->integer("count");
             $table->integer("is_top")->nullable();
             $table->integer("on_sale")->nullable();
             $table->string("slug");
             $table->timestamps();
+            $table->foreign('category_id')
+            ->references('id')->on('categoris')
+            ->onDelete('CASCADE')
+            ->onUpdate('CASCADE');
         });
     }
 

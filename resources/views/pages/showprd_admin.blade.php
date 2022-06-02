@@ -1,13 +1,12 @@
 <table class="table">
     <thead>
     <tr class="text-center">
-        <th scope="col">Code</th>
-        <th scope="col">Name</th>
-        <th scope="col">Category</th>
-        <th scope="col">Price</th>
-        <th scope="col">Count</th>
-        <th scope="col">Highlights</th>
-        <th scope="col">Action</th>
+        <th scope="col">Mã</th>
+        <th scope="col">Tên</th>
+        <th scope="col">Danh mục</th>
+        <th scope="col">Giá</th>
+        <th scope="col">Số lượng</th>
+        <th scope="col">Nổi bật</th>
     </tr>
     </thead>
     <tbody>
@@ -22,8 +21,8 @@
                 <input type="checkbox" class="listCkbPrdA" data-idPrd="{{$val->id}}" <?php if($val->is_top == 1) echo "checked"; ?> >
             </td>
             <td>
-                <button id="" class="btn btn-danger btn_delPrd" data-prdid="{{$val->id}}" data-name="{{$val->name}}">Delete</button>
-                <a href="/product/edit/{{$val->id}}"><button id="" class="btn btn-warning btn_editPrd" data-prdid="{{$val->id}}" data-name="{{$val->name}}">Edit</button></a>
+                <button id="" class="btn btn-danger btn_delPrd" data-prdid="{{$val->id}}" data-name="{{$val->name}}">Xóa</button>
+                <a href="/product/edit/{{$val->id}}"><button id="" class="btn btn-warning btn_editPrd" data-prdid="{{$val->id}}" data-name="{{$val->name}}">Sửa</button></a>
             </td>
         </tr>
     @endforeach

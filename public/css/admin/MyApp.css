@@ -160,12 +160,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  color: green;
+  color: black;
   position: relative;
-}
-.banner_center:first-child span {
-  background: red;
-  color: white;
 }
 .banner_center:last-child span {
   background: #3fbf79;

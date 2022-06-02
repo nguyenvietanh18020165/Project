@@ -15,10 +15,14 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
-            $table->integer('status');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('status');
             $table->string('payment');
             $table->timestamps();
+            $table->foreign('user_id')
+            ->references('id')->on('users')
+            ->onDelete('CASCADE')
+            ->onUpdate('CASCADE');
         });
     }
 

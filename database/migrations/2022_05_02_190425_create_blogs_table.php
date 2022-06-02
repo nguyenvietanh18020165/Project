@@ -18,12 +18,20 @@ return new class extends Migration
             $table->string('name');
             $table->longtext('news');
             $table->string('desc');
-            $table->integer('blog_category');
-            $table->integer('category');
+            $table->unsignedBigInteger('blog_category');
+            $table->unsignedBigInteger('category');
             $table->integer('user_id');
             $table->string('image');
             $table->string('slug');
             $table->timestamps();
+            $table->foreign('blog_category')
+                ->references('id')->on('blog_categories')
+                ->onDelete('CASCADE')
+                ->onUpdate('CASCADE');
+            $table->foreign('category')
+            ->references('id')->on('categoris')
+            ->onDelete('CASCADE')
+            ->onUpdate('CASCADE');
         });
     }
 

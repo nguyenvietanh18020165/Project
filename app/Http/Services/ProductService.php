@@ -29,9 +29,12 @@ class ProductService
             "slug" => Str::slug($request->input("productName"), "-")."-".$code
         ]);
         $prdId = $productA->id;
+        // kiểm tra xem có tải ảnh lên hay k
         if ($request->hasfile('productImages')) {
             $files = $request->file("productImages");
+            // lặp chuỗi ảnh được tải lên
             foreach ($files as $key => $file) {
+                // xửa lý từng ảnh được tải lên
                 $ext = $file->extension();
                 $fileName = 'product-' . time() . $key . '.' . $ext;
                 $file->move(public_path("upload/images/products"), $fileName);
@@ -97,10 +100,7 @@ class ProductService
     }
     public function delProduct($id)
     {
-        $product = Products::where("id", $id)->join('categoris', 'products.category_id', "=", "categoris.id")
-            ->select("products.*", "categoris.name as ctgr_name")
-            ->orderBy("id", "desc")
-            ->get();
+        $product = Products::where("id", $id)->delete();
         return $product;
     }
 
