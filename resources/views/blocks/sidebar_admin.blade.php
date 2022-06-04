@@ -54,9 +54,10 @@
                 </li>
                 <li class="nav-item <?php if(isset($sidebar) && $sidebar == 'blog') echo 'menu-is-opening menu-open'; ?>">
                     <a href="#" class="nav-link">
-                        <i class="bi bi-newspaper"></i>
+                        
+                        <i class="nav-icon fa fa-newspaper"></i>
                         <p>
-                            Tin tức
+                             Tin tức
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
@@ -112,7 +113,7 @@
                 </li>
                 <li class="nav-item" id="show_cart_admin">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon far fa-plus-square"></i>
+                        <i class="nav-icon fa fa-cart-arrow-down"></i>
                         <p>
                             Giỏ hàng
                         </p>

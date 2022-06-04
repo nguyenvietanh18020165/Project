@@ -9,14 +9,14 @@
                 <img class="h-100 w-100 rounded-start" src="{{ asset('upload/images/background.jpg') }}" alt="">
             </div>
             <div class="col-12 col-md-7 col-lg-6 p-5">
-                <h2 class="text-center mb-4 fw-bold">Login to your account</h2>
+                <h2 class="text-center mb-4 fw-bold">Đăng nhập tài khoản</h2>
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="mb-3">
                         <div class="position-relative">
                             <input id="email" type="email"
                                    class="form-control px-4 @error('email') is-invalid @enderror" name="email"
-                                   value="{{ old('email') }}" required autocomplete="email" placeholder="Email Address" autofocus>
+                                   value="{{ old('email') }}" required autocomplete="email" placeholder="Email" autofocus>
                             <i class="fa-solid fa-envelope position-absolute" style="top:11px; left: 5px;"></i>
                             @error('email')
                             <span class="invalid-feedback" role="alert">
@@ -30,7 +30,7 @@
                         <div class="position-relative">
                             <input id="password" type="password"
                                    class="form-control px-4 @error('password') is-invalid @enderror" name="password"
-                                   required autocomplete="current-password" placeholder="Password">
+                                   required autocomplete="current-password" placeholder="Mật khẩu">
                             <i class="fa-solid fa-key position-absolute" style="top:11px; left: 5px;"></i>
                             @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -47,7 +47,7 @@
                                        id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                 <label class="form-check-label" for="remember">
-                                    {{ __('Remember Me') }}
+                                    {{ __('Nhớ mật khẩu') }}
                                 </label>
                             </div>
                         </div>
@@ -56,20 +56,20 @@
                     <div class="mb-0">
                         <div class="">
                             <button type="submit" class="btn btn-primary w-100">
-                                {{ __('Login') }}
+                                {{ __('Đăng nhập') }}
                             </button>
 
                             @if (Route::has('password.request'))
                                 <div class="text-end">
                                     <a class="btn btn-link fw-bold" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                                        {{ __('Quên mật khẩu?') }}
                                     </a>
                                 </div>
                             @endif
                         </div>
                     </div>
                 </form>
-                <h5 class="w-100 text-center">or login with</h5>
+                <h5 class="w-100 text-center">hoặc đăng nhập với</h5>
                 <div class="row">
                     <div class="col-12 col-sm-6 col-md-6">
                         <button class="btn btn-primary w-100 fw-bold">Facebook</button>
@@ -80,8 +80,8 @@
                 </div>
                 <hr>
                 <div class="mt-4">
-                    <p class="text-center">Check out as a guest? <a class="text-decoration-none fw-bold" href="/">Click Here</a><br></p>
-                    <p class="text-center">Don't have an account? <a class="text-decoration-none fw-bold" href="{{route("register")}}">Register Here</a></p>
+                    
+                    <p class="text-center">Chưa có tài khoản? <a class="text-decoration-none fw-bold" href="{{route("register")}}">Đăng kí ngay</a></p>
                 </div>
             </div>
         </div>
