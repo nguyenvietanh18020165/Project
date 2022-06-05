@@ -55,8 +55,8 @@
                         </div>
                     </div>
 
-                    <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY" data-callback="verifyCaptcha"></div>
-                    <div id="g-recaptcha-error"></div>
+                    {{-- <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY" data-callback="verifyCaptcha"></div>
+                    <div id="g-recaptcha-error"></div> --}}
 
                     <div class="mb-0 mt-2">
                         <div class="">
@@ -66,6 +66,7 @@
                         </div>
                     </div>
                 </form>
+                <h5></h5>
                 <h5 class="w-100 text-center">hoặc đăng ký với</h5>
                 <div class="row">
                     <div class="col-12 col-sm-6 col-md-6">
